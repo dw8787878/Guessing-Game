@@ -1,150 +1,55 @@
 <html lang="en">
-  <head>
 
-    <title>Guessing Game</title>
+  <head>
+  <title>Guessing Game</title>
 
   <link href="https://fonts.googleapis.com/css?family=Short+Stack" rel="stylesheet">
-
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
 
-    <!-- CSS here-->
-<style>
-
-body{
-  background-image: url("https://static.vecteezy.com/system/resources/previews/000/092/726/original/question-mark-background-vector.jpg");
-}
-
-ul
- {
-  border: 0px solid #90bade;
-  text-align: center;
-}
-
-li
- {
-  list-style-type:none;
-  border: 1px solid black;
-  display: inline-block;
-  margin: 5px;
-  padding: 40px;
- }
-
-input {
-  border-color: red;
-  margin: 20px;
-  padding: 15px;
-  border-radius: 50px;
-  outline: none;
-
-}
-
-button {
-  border-color: red;
-  border-radius: 50px;
-  background-color: white;
-  font-size: 20px;
-  font-family: 'Short Stack', cursive;
-}
-
-#colorfulSplash {
-  border: 1px solid red;
-  padding: 5px;
-  margin: 100px;
-  border-radius: 30px;
-  background: white;
-}
-
-#yourGuess {
-  text-align: center;
-}
-
-#footer {
-        width: 100%;
-        padding: 5px;
-        border-top: solid 2px black;
-        background-color: white;
-        position: fixed;
-        bottom: 0;
-      }
-
-#title {
-  text-align: center;
-  font-size: 50px;
-  font-family: 'Short Stack', cursive;
-}
-
-#subtitle {
-  text-align: center;
-  font-family: 'Short Stack', cursive;
-
-}
-
-.footerLogo {
-        display: inline-block;
-        margin: 120px;
-        width: 50px;
-        height: 25px;
-      }
-
-</style>
-
-<div class="container-fluid">
 <body>
-      <div id='app'>
+  <div class="container-fluid">
+    <div id='app'>
         <div id='colorfulSplash'>
-        <div id='headers'>
-          <h1 id='title'><font color="red">P</font><font color="green">l</font><font color="yellow">a</font><font color="blue">y </font><font color="green">t</font><font color="red">h</font><font color="brown">e </font><font color="blue">G</font><font color="purple">u</font><font color="silver">e</font><font color="black">s</font><font color="red">s</font><font color="black">i</font><font color="red">n</font><font color="red">g </font><font color="blue">G</font><font color="green">a</font><font color="brown">m</font><font color="red">e</font><font color="red">!</font></h1>
+          <div id='headers'>
+            <h1 id='title'><font color="red">P</font><font color="green">l</font><font color="yellow">a</font><font color="blue">y </font><font color="green">t</font><font color="red">h</font><font color="brown">e </font><font color="blue">G</font><font color="purple">u</font><font color="silver">e</font><font color="black">s</font><font color="red">s</font><font color="black">i</font><font color="red">n</font><font color="red">g </font><font color="blue">G</font><font color="green">a</font><font color="brown">m</font><font color="red">e</font><font color="red">!</font></h1>
             <h3 id='subtitle'>Guess a number between 1-100!</h3>
         </div>
 
-        <div id='main'>
-            <div>
-            <div id='yourGuess'>
-                <input placeholder="#" maxlength='3' autofocus=autofocus></input>
-                <button>Go!</button>
-            </div>
+      <div id='main'>
+        <div>
+          <div id='yourGuess'>
+              <input id="player-input" placeholder="#" maxlength='3' autofocus=autofocus></input>
+              <button id="submit">Go!</button>
           </div>
-          <div id='guesses'>
-      <ul>
-        <li>-</li>
-        <li>-</li>
-        <li>-</li>
-        <li>-</li>
-        <li>-</li>
-      </ul>
           </div>
 
-          <div id='guesses'>
-            <!-- unordered list of guesses -->
-          </div>
-
-          <div id="menu-btns">
-            <!-- reset and hint buttons -->
-          </div>
-        </div>
-  </div>
+      <div id='guesses'>
+        <ul id='guess-list'>
+          <li class='guess'>-</li>
+          <li class='guess'>-</li>
+          <li class='guess'>-</li>
+          <li class='guess'>-</li>
+          <li class='guess'>-</li>
+        </ul>
       </div>
 
-
-<!--
-    <div id="footer">
-        <div class=''>
-            <h4 align="center">Project by Darryn</h4>
-        </div>
-        <div>
-          <div class="footer">
-            <img align="center" src='fa-logo@2x.png'></img>
+      <center>
+          <div id="menu-btns">
+            <!-- reset and hint buttons -->
+            <button class='btn btn-default' id='reset'>Reset</button>
+            <button class='btn btn-default' id='hint'>Hint</button>
           </div>
-          <div class="footer">
-            <img align="center" src='grace_hopper_academy.png'></img>
-          </div>
+     </center>
 
-
-        </div>
     </div>
--->
+  </div>
+</div>
+  </div> <!-- closes class="container-fluid" -->
+
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+  <script src="js/GuessingGame.js"></script>
 
   </body>
-  </div> <!-- closes class="container-fluid">
 </html>
